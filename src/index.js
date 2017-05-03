@@ -51,14 +51,10 @@ function init() {
     });
   });
 
-  // Add some fixed debug message in response to "help" text. It will not be used
-  // in any of the conversations.
-  controller.hears('^help$', ['direct_message', 'direct_mention'], (bot, message) => {
-    bot.reply(message, 'FIXME: reply with some meaningful debug message.');
-  });
-
-  // If the bot hears anything else than "help", init a new conversation.
+  // If the bot hears anything, init a new conversation.
   // This function is executed per every message sent by every user.
+  // The events listened to are file upload, direct message to bot and
+  // direct mention (message starts with bot's username).
   controller.hears('.*', ['file_share', 'direct_message', 'direct_mention'], async (bot, message) => {
     respond(bot, message);
   });
