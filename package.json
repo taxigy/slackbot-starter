@@ -1,0 +1,39 @@
+{
+  "name": "slackbot-starter",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Slack bot ES6 starter (generators!)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://@github.com/taxigy/slackbot-starter.git"
+  },
+  "author": "Rishat Muhametshin <rishat@rishat.us>",
+  "engines": {
+    "node": ">=7.8.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "dev": "concurrently 'webpack --watch' 'nodemon build/index.js'",
+    "start": "npm run build; node build/index.js"
+  },
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "beepboop-botkit": "^1.4.1",
+    "botkit": "^0.5.4",
+    "concurrently": "^3.4.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "nodemon": "^1.11.0",
+    "webpack": "^2.4.1"
+  }
+}
